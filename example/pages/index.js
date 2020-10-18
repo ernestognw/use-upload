@@ -2,7 +2,9 @@
 import { Box, Typography } from 'blockdemy-ui';
 import hookConfig from '../../use-upload/package.json';
 import HowToUse from '../components/how-to-use/index';
+import GettingStarted from '../components/getting-started/index';
 import Examples from '../components/examples/index';
+import APIReference from '../components/api-reference/index';
 
 const toCamel = (str) =>
   str.replace(/([-_][a-z])/gi, ($1) => {
@@ -32,8 +34,10 @@ const Index = () => {
               </Typography>
             )}
           </Box>
+          <GettingStarted />
           <Examples />
           <HowToUse />
+          <APIReference />
         </Box>
         <Box maxWidth={700} mx="auto" p="1em" a>
           <Typography variant="muted">

@@ -10,7 +10,7 @@ const HowToUse = () => {
   const [howToUse, setHowToUse] = useState('REST');
 
   return (
-    <Box my={20}>
+    <Box my={20} id="how-to-use">
       <Typography variant="h2">How to use</Typography>
       <Typography>
         In order to use this hook, you must need to create an API endpoint to retrieve a presigned
@@ -52,7 +52,7 @@ const HowToUse = () => {
         </Box>
       </Typography>
       <Typography>
-        Here`&apos;`s an example of how to generate a pre-signed URL using AWS on both types of APIs
+        Here&apos;s an example of how to generate a pre-signed URL using AWS on both types of APIs
         on NodeJS
       </Typography>
       <Alert

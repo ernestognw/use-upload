@@ -28,11 +28,7 @@ class _Document extends Document {
     const { styleTags } = this.props;
     return (
       <Html lang="es-MX">
-        <Head>
-          <meta charSet="utf-8" />
-          <noscript data-n-css="true" />
-          {styleTags}
-        </Head>
+        <Head>{styleTags}</Head>
         <body>
           <Main />
           <NextScript />
