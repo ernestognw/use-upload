@@ -1,0 +1,30 @@
+{
+  "name": "example",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "next build",
+    "dev": "next",
+    "develop": "yarn dev",
+    "export": "next export",
+    "package": "yarn build && yarn export",
+    "refresh": "yarn install --force",
+    "start": "next start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/client": "^3.2.4",
+    "blockdemy-ui": "^0.4.12",
+    "graphql": "^15.3.0",
+    "next": "^9.5.5",
+    "raw-loader": "^4.0.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-syntax-highlighter": "^15.2.1",
+    "styled-components": "^5.2.0"
+  },
+  "private": true
+}

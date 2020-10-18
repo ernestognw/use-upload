@@ -1,0 +1,5 @@
+node_modules/
+build/
+.next/
+use-upload/upload/
+use-upload/index.js

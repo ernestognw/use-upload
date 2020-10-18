@@ -1,0 +1,25 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "ernestognw",
+      "name": "Ernesto García",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/33379285?v=4",
+      "profile": "https://github.com/ernestognw",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "use-custom-hook",
+  "projectOwner": "ernestognw",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}

@@ -1,0 +1,44 @@
+{
+  "name": "use-upload",
+  "version": "1.0.1",
+  "description": "A react hook to upload files to any cloud service using presigned urls gotten through a REST or Graphql API",
+  "author": {
+    "name": "Ernesto García",
+    "email": "ernestognw@gmail.com",
+    "url": "https://twitter.com/ernestognw"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "react-hooks"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --out-dir .",
+    "bump": "npm version",
+    "example": "cd example && yarn install && yarn package",
+    "prepublishOnly": "yarn build",
+    "watch": "nodemon --watch src --exec \"yarn build\""
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-react": "^7.9.4",
+    "nodemon": "^2.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ernestognw/use-upload"
+  },
+  "bugs": {
+    "url": "https://github.com/ernestognw/use-upload/issues"
+  },
+  "peerDependencies": {
+    "react": "^16.14.0"
+  },
+  "dependencies": {
+    "axios": "^0.20.0"
+  }
+}
