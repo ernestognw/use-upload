@@ -6,6 +6,8 @@
 
 Upload files client side with presigned URLs from any cloud storage
 
+### [Docs & Examples](https://use-upload.netlify.app/)
+
 ## 🚀 Installation
 
 With `npm`:
@@ -17,6 +19,70 @@ With `yarn`:
 ```
 yarn add use-upload
 ```
+
+## 🖥️ Usage
+
+You will need an API endpoint that returns you a presigned URL from the storage service you are using. If you don't know what a presigned URL is, please go to the [How to use](https://use-upload.netlify.app/#how-to-use) section in the docs and you'll learn more
+
+Once you have a valid endpoint, just import accordingly:
+
+With `REST`:
+```js
+import { useRestUpload } from 'use-upload';
+
+const MyComponent = () => {
+  const { 
+    upload,
+    uploading,
+    progress,
+    reset 
+  } = useRestUpload(
+    '<YOUR-ENDPOINT>', 
+    { ...config }
+  )
+
+  const handleUpload = () => {
+    // Config is equivalent to client.query(_, config)
+    // See: https://github.com/axios/axios#request-config
+    const finalUrl = await upload(file, config);
+  }
+
+  return (
+    ...
+  )
+}
+```
+
+With `graphql`:
+```js
+import { useGraphqlUpload } from 'use-upload';
+
+const MyComponent = () => {
+  const { 
+    upload,
+    uploading,
+    progress,
+    reset 
+  } = useGraphqlUpload(
+    gqlQueryDefinition, // Using gql tag
+    { 
+      ...config, 
+      apolloClient: <APOLLO-CLIENT-INSTANCE> // A valid apollo client instance is required
+    }
+  )
+
+  const handleUpload = () => {
+    // Config is equivalent to axios config
+    // See: https://www.apollographql.com/docs/react/data/queries/#options
+    const finalUrl = await upload(file, config);
+  }
+
+  return (
+    ...
+  )
+}
+```
+
 
 ## Contributors ✨
 

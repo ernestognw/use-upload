@@ -30,7 +30,7 @@ const GettingStarted = () => {
         <Typography as="a" color="primary" href="/#how-to-use">
           &apos;How to use&apos;
         </Typography>{' '}
-        section down below and you&apos;ll learn mopre
+        section down below and you&apos;ll learn more
       </Typography>
       <Typography mt={20}>Once you have a valid endpoint, just import accordingly:</Typography>
       <Tabs>
