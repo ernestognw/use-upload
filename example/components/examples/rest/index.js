@@ -3,12 +3,17 @@ import { useRestUpload } from 'use-upload';
 
 const Rest = () => {
   const [url, setUrl] = useState('');
+  const [message, setMessage] = useState('');
   const { upload, progress, uploading, reset } = useRestUpload(
-    'https://run.mocky.io/v3/47c5189f-32ea-40c0-ae1b-bf77e8e83e20'
+    'http://use-upload.free.beeceptor.com/rest/signFileUrl'
   );
 
   const onFileChange = async (event) => {
     const [file] = event.target.files;
+    if (file.size > 1000000) {
+      setMessage('Sorry, but beeceptor API mock only works with files under 1 MB');
+      return;
+    }
     const fileUrl = await upload(file, { body: { fileName: file.name, fileType: file.type } });
     setUrl(fileUrl);
   };
@@ -16,7 +21,7 @@ const Rest = () => {
   return (
     <>
       {uploading && <span>uploading...</span>}
-      <input disabled={uploading} onChange={onFileChange} type="file" />
+      <input max-size="1024" disabled={uploading} onChange={onFileChange} type="file" />
       <br />
       <progress max="100" value={progress} />
       <span>{progress}%</span>
@@ -28,6 +33,7 @@ const Rest = () => {
           </button>
         </>
       )}
+      {message && <p>{message}</p>}
     </>
   );
 };

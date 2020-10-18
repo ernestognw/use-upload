@@ -3,7 +3,7 @@ import { useGraphqlUpload } from 'use-upload';
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 
 const client = new ApolloClient({
-  uri: 'https://run.mocky.io/v3/37a8330e-6793-4a99-8329-b68064d1ad6b',
+  uri: 'http://use-upload.free.beeceptor.com/graphql/signFileUrl',
   cache: new InMemoryCache(),
 });
 

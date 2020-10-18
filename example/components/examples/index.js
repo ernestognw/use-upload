@@ -1,7 +1,7 @@
 /* eslint-disable import/no-webpack-loader-syntax */
 /* eslint-disable import/extensions */
 import { useState } from 'react';
-import { Box, Typography, Tab, Alert } from 'blockdemy-ui';
+import { Box, Typography, Tab } from 'blockdemy-ui';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import Rest from './rest';
 import RestText from '!raw-loader!./rest';
@@ -16,11 +16,6 @@ const Examples = () => {
   return (
     <Box my={30}>
       <Typography variant="h2">Examples</Typography>
-      <Alert
-        type="warning"
-        primary="Examples rely on a JSON mock service"
-        secondary="The example is built on top of mocky.io, and they have a low memory limit for requests, so it can hang with medium size files. I couldn't find any better, but let me know if you have an alternative :)"
-      />
       <Tabs>
         <Tab active={example === 'REST'} onClick={() => setExample('REST')}>
           REST
