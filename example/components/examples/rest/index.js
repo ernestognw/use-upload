@@ -4,7 +4,7 @@ import { useRestUpload } from 'use-upload';
 const Rest = () => {
   const [url, setUrl] = useState('');
   const { upload, progress, uploading, reset } = useRestUpload(
-    'https://run.mocky.io/v3/b09ca35e-a3e7-49f4-ba2b-fe3ea812b611'
+    'https://run.mocky.io/v3/47c5189f-32ea-40c0-ae1b-bf77e8e83e20'
   );
 
   const onFileChange = async (event) => {
