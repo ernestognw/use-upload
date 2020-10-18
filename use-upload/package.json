@@ -18,7 +18,7 @@
     "bump": "npm version",
     "example": "cd example && yarn install && yarn package",
     "postpublish": "rm README.md",
-    "prepublishOnly": "cp ../README.md && yarn build",
+    "prepublishOnly": "cp ../README.md . && yarn build",
     "watch": "nodemon --watch src --exec \"yarn build\""
   },
   "license": "MIT",
