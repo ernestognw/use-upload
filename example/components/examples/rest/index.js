@@ -14,7 +14,7 @@ const Rest = () => {
       setMessage('Sorry, but beeceptor API mock only works with files under 1 MB');
       return;
     }
-    const fileUrl = await upload(file, { body: { fileName: file.name, fileType: file.type } });
+    const fileUrl = await upload(file, { body: { filePath: file.name, fileType: file.type } });
     setUrl(fileUrl);
   };
 
