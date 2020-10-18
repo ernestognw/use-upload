@@ -18,12 +18,17 @@ const GET_SIGNED_URL = gql`
 
 const Rest = () => {
   const [url, setUrl] = useState('');
+  const [message, setMessage] = useState('');
   const { upload, progress, uploading, reset } = useGraphqlUpload(GET_SIGNED_URL, {
     apolloClient: client,
   });
 
   const onFileChange = async (event) => {
     const [file] = event.target.files;
+    if (file.size > 1000000) {
+      setMessage('Sorry, but beeceptor API mock only works with files under 1 MB');
+      return;
+    }
     const fileUrl = await upload(file, { variables: { filePath: file.name, fileType: file.type } });
     setUrl(fileUrl);
   };
@@ -43,6 +48,7 @@ const Rest = () => {
           </button>
         </>
       )}
+      {message && <p>{message}</p>}
     </>
   );
 };
