@@ -6,7 +6,7 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 import Rest from './rest';
 import RestText from '!raw-loader!./rest';
 import Graphql from './graphql';
-import GraphqlText from '!raw-loader!./graphql.js';
+import GraphqlText from '!raw-loader!./graphql';
 
 const { Tabs } = Tab;
 
