@@ -1,6 +1,7 @@
 #  use-upload
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ab58f80d-099a-46f2-b6a5-37ae842a3cec/deploy-status)](https://app.netlify.com/sites/zealous-sinoussi-608791/deploys)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Upload files client side with presigned URLs from any cloud storage
