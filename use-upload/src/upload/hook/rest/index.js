@@ -35,7 +35,7 @@ const useRestUpload = (signedUrlEndpoint, options = defaultOptions) => {
   const [progress, setProgress] = useState(0);
   const [uploading, setUploading] = useState(false);
 
-  const upload = async (file, { body = {} }) => {
+  const upload = async (file, { body = {}, ...uploadOptions }) => {
     setUploading(true);
 
     const { data } = await axios({
@@ -63,6 +63,7 @@ const useRestUpload = (signedUrlEndpoint, options = defaultOptions) => {
         'Content-Type': file.type,
         ...uploadFileOptions?.headers,
       },
+      ...uploadOptions,
     });
 
     setUploading(false);

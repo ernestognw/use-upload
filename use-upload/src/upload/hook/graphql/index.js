@@ -35,12 +35,13 @@ const useGraphqlUpload = (querySignedUrl, options = defaultOptions) => {
   const [progress, setProgress] = useState(0);
   const [uploading, setUploading] = useState(false);
 
-  const upload = async (file, { variables = {} }) => {
+  const upload = async (file, { variables = {}, ...uploadOptions }) => {
     setUploading(true);
 
     const { data } = await apolloClient.query({
       query: querySignedUrl,
       variables,
+      ...uploadOptions,
     });
 
     if (!data[root]) {
