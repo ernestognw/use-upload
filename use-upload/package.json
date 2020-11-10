@@ -1,6 +1,6 @@
 {
   "name": "use-upload",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A react hook to upload files to any cloud service using presigned urls gotten through a REST or Graphql API",
   "author": {
     "name": "Ernesto García",
